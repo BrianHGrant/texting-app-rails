@@ -27,9 +27,9 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-    @message = Message.new(message_params)
     @contacts = Contact.all
-
+    @message = Message.create(message_params)
+    @message.to = @message.contact.number
 
     respond_to do |format|
       if @message.save

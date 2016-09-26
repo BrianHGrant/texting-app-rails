@@ -1,8 +1,2 @@
 [Cassette: 'Message/doesn't save the message if twilio gives an error'] Initialized with options: {:record=>:once, :match_requests_on=>[:method, :uri], :allow_unused_http_interactions=>true, :serialize_with=>:yaml, :persist_with=>:file_system}
 [Cassette: 'Message/adds an error if the to number is invalid'] Initialized with options: {:record=>:once, :match_requests_on=>[:method, :uri], :allow_unused_http_interactions=>true, :serialize_with=>:yaml, :persist_with=>:file_system}
-[webmock] Handling request: [post https://api.twilio.com/2010-04-01/Accounts/AC19b9c78612e26686aef43e3f52f2e5a8/Messages.json] (disabled: false)
-[webmock] Identified request type (unhandled) for [post https://api.twilio.com/2010-04-01/Accounts/AC19b9c78612e26686aef43e3f52f2e5a8/Messages.json]
-[webmock] Handling request: [post https://api.twilio.com/2010-04-01/Accounts/AC19b9c78612e26686aef43e3f52f2e5a8/Messages.json] (disabled: false)
-[webmock] Identified request type (unhandled) for [post https://api.twilio.com/2010-04-01/Accounts/AC19b9c78612e26686aef43e3f52f2e5a8/Messages.json]
-[webmock] Handling request: [post https://api.twilio.com/2010-04-01/Accounts/AC19b9c78612e26686aef43e3f52f2e5a8/Messages.json] (disabled: false)
-[webmock] Identified request type (unhandled) for [post https://api.twilio.com/2010-04-01/Accounts/AC19b9c78612e26686aef43e3f52f2e5a8/Messages.json]
