@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'rest-client'
+gem 'ffaker'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -25,6 +27,9 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'poltergeist'
   gem 'dotenv-rails'
+  gem 'rails-controller-testing'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

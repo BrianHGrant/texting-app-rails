@@ -10,11 +10,14 @@ class MessagesController < ApplicationController
   # GET /messages/1
   # GET /messages/1.json
   def show
+    @message = Message.find(params[:id])
   end
 
   # GET /messages/new
   def new
     @message = Message.new
+    @contacts = Contact.all
+
   end
 
   # GET /messages/1/edit
@@ -25,6 +28,8 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(message_params)
+    @contacts = Contact.all
+
 
     respond_to do |format|
       if @message.save
@@ -69,6 +74,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:body, :from, :to, :username)
+      params.require(:message).permit(:body, :from, :username, :contact_id)
     end
 end

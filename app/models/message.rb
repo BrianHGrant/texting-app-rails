@@ -1,6 +1,7 @@
 class Message < ApplicationRecord
-  validates_presence_of :body, :to, :from, :username
+  validates_presence_of :body, :from, :username
   before_create :send_message
+  belongs_to :contact
 
   private
 
@@ -15,7 +16,9 @@ class Message < ApplicationRecord
                     To: to,
                     From: from }
       ).execute
-    rescue
+    rescue RestClient::BadRequest => error
+      message = JSON.parse(error.response)['message']
+      errors.add(:base, message)
       false
     end
   end

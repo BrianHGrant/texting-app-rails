@@ -22,8 +22,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :to %>
-    <%= f.text_field :to %>
+    <%= f.label :contact_id %>
+    <%= f.select :contact_id do %>
+      <% @contacts.each do |contact| %>
+        <%= content_tag(:option, contact.name + ", " +contact.number, value: contact.id) %>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="field">
