@@ -27,8 +27,8 @@ class QuotesController < ApplicationController
     @quote = Quote.create
     respond_to do |format|
       if @quote.save
-        format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
-        format.json { render :show, status: :created, location: @quote }
+        format.html { redirect_to new_message_path(quote: @quote.quote), notice: 'Quote was successfully created.' }
+        format.json
       else
         format.html { render :new }
         format.json { render json: @quote.errors, status: :unprocessable_entity }
